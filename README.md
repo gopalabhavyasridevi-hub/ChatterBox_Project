@@ -30,4 +30,4 @@ It allows multiple users to communicate instantly in a browser.
    http://127.0.0.1:8000
 
 ## 👩‍💻 Developed By
-Bhavya Sri Devi
+Bhavya Sri Devi.Gopala
