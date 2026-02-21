@@ -54,7 +54,8 @@ SQLite (Database)
 ├── websocket_manager.py
 │
 ├── LICENSE
-└── README.md```
+└── README.md
+```
 
 
 
