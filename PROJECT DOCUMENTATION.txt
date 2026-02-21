@@ -1,0 +1,327 @@
+                                                                   CHATTERBOX – REAL-TIME WEBSOCKET CHAT APPLICATION
+                                                                               FULL PROJECT DOCUMENTATION
+
+Author: Gopala Bhavya Sri Devi
+Project Type: Full Stack Web Application
+Technologies Used: FastAPI, WebSockets, SQLite, HTML, CSS, JavaScript
+
+1. INTRODUCTION
+1.1 Project Overview
+
+ChatterBox is a full-stack real-time web-based chat application developed using FastAPI and WebSockets. The system allows multiple users to communicate instantly through a secure login system.
+
+The application demonstrates modern backend architecture, asynchronous communication using WebSockets, and database integration using SQLite.
+
+It includes advanced features such as:
+
+• Real-time messaging
+• Message persistence
+• Seen status (single tick / double tick)
+• Emoji support
+• Date-based message grouping
+• Toxic word detection
+• 3-warning auto-block system
+
+This project showcases practical implementation of full-stack development concepts including frontend design, backend processing, database management, and real-time communication handling.
+
+1.2 Objectives
+
+The main objectives of this project are:
+
+• To implement real-time communication using WebSockets
+• To design a secure user authentication system
+• To store and manage chat data efficiently using SQLite
+• To implement a message moderation system
+• To create a WhatsApp-like seen feature
+• To design a clean and interactive chat interface
+• To demonstrate full-stack application development
+
+2. SYSTEM ARCHITECTURE
+
+The application follows a client-server architecture.
+
+Frontend:
+
+Developed using HTML, CSS, and JavaScript.
+The frontend handles:
+
+User interface
+
+Message display
+
+WebSocket communication
+
+Emoji integration
+
+Seen status updates
+
+Backend:
+
+Developed using FastAPI (Python).
+The backend handles:
+
+User authentication
+
+WebSocket connections
+
+Message broadcasting
+
+Toxic word validation
+
+Seen status updates
+
+Database operations
+
+Database:
+
+SQLite is used as the relational database system to store:
+
+User information
+
+Warning counts
+
+Block status
+
+Chat messages
+
+Seen status
+
+The system establishes a persistent WebSocket connection between client and server for instant message delivery.
+
+3. TECHNOLOGY STACK
+3.1 Backend
+
+• FastAPI – High-performance Python web framework
+• WebSockets – Real-time bidirectional communication
+• SQLite – Lightweight relational database
+• Python – Core programming language
+
+3.2 Frontend
+
+• HTML5 – Structure of web pages
+• CSS3 – Styling and layout design
+• JavaScript – WebSocket handling and UI updates
+
+4. FUNCTIONAL MODULES
+4.1 Authentication Module
+Features:
+
+• User Registration
+• User Login
+• Session handling using cookies
+• Blocked user detection
+
+Workflow:
+
+User registers with username and password.
+
+Credentials are stored in the database.
+
+User logs in using registered details.
+
+If user is blocked, access is denied.
+
+Upon successful login, user is redirected to chat page.
+
+4.2 Real-Time Chat Module
+Features:
+
+• WebSocket-based messaging
+• Instant message broadcasting
+• Message storage in database
+• Timestamp tracking
+• Scroll-to-bottom auto update
+
+Workflow:
+
+User logs in.
+
+WebSocket connection is established.
+
+User sends message.
+
+Backend validates message.
+
+Message is stored in database.
+
+Message is broadcast to all connected users.
+
+This ensures real-time communication without refreshing the page.
+
+4.3 Seen Status Module
+
+The seen feature mimics real-world messaging platforms.
+
+Implementation Logic:
+
+• When a message is sent → It shows a single tick (✓)
+• When the receiver views the message while the tab is active →
+Backend updates database seen = 1
+• Sender receives update → UI changes to double tick (✓✓ Seen)
+
+Conditions:
+
+• If receiver is offline → Single tick
+• If receiver tab is minimized → Single tick
+• When receiver opens chat → Double tick
+
+This ensures accurate real-time message status tracking.
+
+4.4 Emoji Integration Module
+
+The application includes emoji support inside the chat interface.
+
+Features:
+
+• Emoji selection panel
+• Click-to-insert emoji
+• Emoji stored in database
+• Emoji displayed properly in chat
+
+This enhances user experience and makes conversation interactive.
+
+4.5 Toxic Word Moderation System
+Purpose:
+
+To maintain safe and controlled communication within the platform.
+
+Implementation:
+
+• A predefined list of stop words is maintained
+• Every outgoing message is checked
+• If stop word detected → Warning issued
+
+Violation Handling:
+
+• 1st violation → Warning 1
+• 2nd violation → Warning 2
+• 3rd violation → User automatically blocked
+
+Blocked users cannot:
+
+• Send messages
+• Continue chat
+• Access system normally
+
+This module ensures discipline and moderation in the chat system.
+
+5. DATABASE DESIGN
+5.1 Users Table
+
+Fields:
+
+• username (Primary Key)
+• password
+• warnings (Default 0)
+• blocked (Default 0)
+
+Purpose:
+
+• Store authentication details
+• Track warning count
+• Maintain blocked status
+
+5.2 Messages Table
+
+Fields:
+
+• id (Primary Key – UUID)
+• sender
+• message
+• timestamp
+• seen (0 = Not Seen, 1 = Seen)
+
+Purpose:
+
+• Store chat history
+• Maintain message persistence
+• Track seen status
+
+6. API ROUTES
+HTTP Routes:
+
+• GET /register
+• POST /register
+• GET /login
+• POST /login
+• GET /chat
+• GET /messages
+
+WebSocket Route:
+
+• /ws/{username}
+
+The WebSocket route handles:
+
+• Sending messages
+• Broadcasting messages
+• Updating seen status
+• Sending warning/block alerts
+
+7. SECURITY IMPLEMENTATION
+
+• Password stored securely in database
+• Blocked users restricted from messaging
+• Warning system for abusive language
+• Server-side validation of all messages
+• WebSocket connection controlled per user
+
+The system ensures safe and controlled access to chat functionality.
+
+8. TESTING
+
+The system was manually tested for:
+
+• User registration validation
+• Login validation
+• Message sending
+• Real-time message delivery
+• Seen status updates
+• Emoji functionality
+• Toxic word detection
+• 3-warning block logic
+
+All modules were tested successfully for expected behavior.
+
+9. LIMITATIONS
+
+• SQLite not suitable for large-scale production
+• No group chat functionality
+• No cloud deployment
+• No media/file sharing
+• Basic UI design
+
+10. FUTURE ENHANCEMENTS
+
+• Group chat rooms
+• Private messaging system
+• Profile pictures
+• Online/offline user status
+• Typing indicator feature
+• PostgreSQL integration
+• Cloud deployment
+• File and image sharing
+• Advanced moderation using AI
+
+11. CONCLUSION
+
+ChatterBox successfully demonstrates:
+
+• Real-time WebSocket communication
+• Database-driven message persistence
+• WhatsApp-like seen functionality
+• Automated moderation system
+• Full-stack application development
+
+The project reflects strong understanding of:
+
+• Backend development using FastAPI
+• Asynchronous programming
+• Real-time system design
+• Database integration
+• Frontend interaction using JavaScript
+
+This project showcases practical implementation of modern web technologies and real-time communication architecture.
+
+                                                                                      THANK YOU
+
