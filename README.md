@@ -17,8 +17,8 @@ It allows multiple users to communicate instantly in a browser.
 - HTML
 - CSS
 - JavaScript
-- 
-- **User Workflow**
+  
+  **User Workflow**
 Registration: New users create an account; passwords are encrypted immediately.
 Login: Validated users receive a unique UUID token.
 Chat Interface: The system establishes a WebSocket connection using the token.
