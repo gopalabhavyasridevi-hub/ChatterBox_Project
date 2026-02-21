@@ -34,7 +34,8 @@ JavaScript
 SQLite (Database)
 
 ## ChatterBox_Project
-'''│
+## 📂 Project Structure
+```│
 ├── __pycache__/
 │
 ├── Frontend/
@@ -53,7 +54,7 @@ SQLite (Database)
 ├── websocket_manager.py
 │
 ├── LICENSE
-└── README.md'''
+└── README.md```
 
 
 
