@@ -34,6 +34,8 @@ JavaScript
 SQLite (Database)
 
 ## 📂 Project Structure
+
+```
 ChatterBox/
 │
 ├── main.py              # FastAPI main application file
@@ -54,6 +56,7 @@ ChatterBox/
 ├── requirements.txt     # Required Python packages
 ├── README.md            # Project documentation
 └── LICENSE              # MIT License
+```
 
 
 
@@ -79,12 +82,12 @@ The server pushes existing chat history from the database to the client.
 Messages are sent, saved to the database, and broadcasted to all active users simultaneously.
 
 ## ▶️ How to Run the Project
-1️⃣ Install Required Packages
+'''1️⃣ Install Required Packages
 pip install fastapi uvicorn
 2️⃣ Run the Server
 uvicorn main:app --reload
 3️⃣ Open in Browser
-http://127.0.0.1:8000
+http://127.0.0.1:8000'''
 
 ## 👩‍💻 Developed By
 
