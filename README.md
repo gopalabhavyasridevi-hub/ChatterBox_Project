@@ -33,30 +33,27 @@ JavaScript
 
 SQLite (Database)
 
-## 📂 Project Structure
-
-```
-ChatterBox/
+## ChatterBox_Project
+'''│
+├── __pycache__/
 │
-├── main.py              # FastAPI main application file
-├── database.py          # Database connection and configuration
-├── models.py            # Database models (User, Messages)
-├── auth.py              # Authentication logic (Login, Register, JWT)
-├── websocket.py         # WebSocket connection handling
-│
-├── static/              # CSS and JavaScript files
-│   ├── style.css
-│   └── script.js
-│
-├── templates/           # HTML templates
+├── Frontend/
+│   ├── chat.html
 │   ├── index.html
 │   ├── login.html
 │   └── register.html
 │
-├── requirements.txt     # Required Python packages
-├── README.md            # Project documentation
-└── LICENSE              # MIT License
-```
+├── auth.py
+├── chat_history.py
+├── client.py
+├── database.db
+├── database.py
+├── main.py
+├── models.py
+├── websocket_manager.py
+│
+├── LICENSE
+└── README.md'''
 
 
 
