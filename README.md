@@ -55,7 +55,7 @@ ChatterBox/
 ├── README.md            # Project documentation
 └── LICENSE              # MIT License
 
-(If your file names are slightly different, tell me — I’ll adjust it exactly to your project.)
+
 
 ## 🔄 User Workflow
 ➜ Registration
