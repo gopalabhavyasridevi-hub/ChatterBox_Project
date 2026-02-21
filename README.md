@@ -19,11 +19,11 @@ It allows multiple users to communicate instantly in a browser.
 - JavaScript
   
   **User Workflow**
-Registration: New users create an account; passwords are encrypted immediately.
-Login: Validated users receive a unique UUID token.
-Chat Interface: The system establishes a WebSocket connection using the token.
-History: The server pushes existing chat history from the database to the client.
-Live Chat: Messages are sent, saved to the database, and broadcasted to all active users simultaneously.
+    ->Registration: New users create an account; passwords are encrypted immediately.
+    ->Login: Validated users receive a unique UUID token.
+    ->Chat Interface: The system establishes a WebSocket connection using the token.
+    ->History: The server pushes existing chat history from the database to the client.
+    ->Live Chat: Messages are sent, saved to the database, and broadcasted to all active users simultaneously.
 
 
 ## ▶️ How to Run the Project
